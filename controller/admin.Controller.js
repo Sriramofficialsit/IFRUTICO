@@ -1,7 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const admin = express.Router();
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const Staff = require("../models/Staff.model");
 const ticket = require("../models/Payment");
 const authMiddleware = require("../middleware/authMiddleware");
@@ -183,3 +183,4 @@ admin.put("/tickets/redeem/:id", authMiddleware, async (req, res) => {
 });
 
 module.exports = admin;
+
