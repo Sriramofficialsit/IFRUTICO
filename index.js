@@ -8,7 +8,7 @@ const dbconnect = require("./config/db");
 const admin = require("./controller/admin.Controller");
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://ifrutico-main.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
@@ -24,3 +24,4 @@ app.use("/admin", admin);
 app.listen(process.env.PORT, () =>
   console.log(`Server running on ${process.env.PORT}`)
 );
+
